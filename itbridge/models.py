@@ -19,6 +19,7 @@ class User(models.Model):
     deleted_at = models.DateTimeField(auto_now_add=True)
 
 
+
 class ProgrammingLanguage(models.Model):
     id = models.BigIntegerField(primary_key=True)
     name = models.CharField(max_length=100)
