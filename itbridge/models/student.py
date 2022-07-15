@@ -6,7 +6,7 @@ from shared.models import Base
 
 
 class Student(Base):
-    user = models.ForeignKey(User, null=False, on_delete=models.CASCADE, related_name="user_student")
+    users = models.ForeignKey(User, null=False, on_delete=models.CASCADE, related_name="user_student")
     programming_language = models.ForeignKey(
         ProgrammingLanguage, null=False, on_delete=models.CASCADE, related_name="student_programming_language")
     start_at = models.DateTimeField()
