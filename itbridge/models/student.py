@@ -13,4 +13,4 @@ class Student(Base):
     end_at = models.DateTimeField()
 
     def __str__(self):
-        return self.user.email
+        return self.users.email
