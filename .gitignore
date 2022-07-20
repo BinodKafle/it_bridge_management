@@ -1,4 +1,12 @@
+.Python
 .idea
 .env
 .venv
+.vscode
+.DS_Store
 
+data
+__pycache__
+
+media/
+static
