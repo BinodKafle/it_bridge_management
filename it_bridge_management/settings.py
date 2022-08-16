@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     "itbridge",
     "shared",
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
