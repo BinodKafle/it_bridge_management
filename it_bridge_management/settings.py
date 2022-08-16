@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     "rest_framework",
+    "drf_spectacular",
 
     "itbridge",
     "shared",
@@ -130,7 +131,21 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = "media"
+MEDIA_URL = "/media/"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'IT Bridge Management',
+    'DESCRIPTION': 'This project is for managing students, teachers and classes',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
