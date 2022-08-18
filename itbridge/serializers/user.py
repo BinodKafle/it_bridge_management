@@ -12,3 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
         if image.size > 1 * 1024 * 1024:
             raise serializers.ValidationError("Image must be less than 1 MB.")
         return image
+    def validation_phone_number(self,phone_number):
+        if phone_number.size > 4+10:
+            raise serializers.ValidationError("Phonenumber must be equal ko 14 digits")
+        return phone_number
