@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from ..models import holiday
+from ..models import Holiday
 
 
 class HolidaySerializer(serializers.ModelSerializer):
     class Meta:
-        model = holiday
+        model = Holiday
         fields = "__all__"
