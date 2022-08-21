@@ -19,7 +19,7 @@ class BaseQuerySet(QuerySet):
 
 class BaseManager(models.Manager):
     def __init__(self, *args, **kwargs):
-        self.alive_only = Kwargs.pop("alive_only", True)
+        self.alive_only = kwargs.pop("alive_only", True)
         self._get_queryset_class = BaseQuerySet
         super(BaseManager, self).__init__(*args, **kwargs)
 

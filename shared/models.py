@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
 from .managers import BaseManager
-
 
 class Base(models.Model):
     class Meta:
