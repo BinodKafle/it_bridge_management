@@ -24,7 +24,8 @@ class BaseManager(models.Manager):
         super(BaseManager, self).__init__(*args, **kwargs)
 
     def get_queryset(self):
-        qs = super().get_queryset()
+        qs = super(BaseManager, self).get_queryset()
         if self.alive_only:
             return qs.filter(deleted_at=None)
         return qs
+
