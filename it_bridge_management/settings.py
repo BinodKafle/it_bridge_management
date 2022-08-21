@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "debug_toolbar",
 
-
     "itbridge",
     "shared",
 ]

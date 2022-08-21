@@ -24,3 +24,4 @@ pkgutil-resolve-name==1.3.10
 pyrsistent==0.18.1
 uritemplate==4.1.1
 zipp==3.8.1
+django-debug-toolbar==3.6.0
