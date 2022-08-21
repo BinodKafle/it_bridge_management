@@ -4,7 +4,6 @@ from ..views.holiday import HolidayViewSet
 
 router = DefaultRouter(trailing_slash=False)
 
-router.register(r"holiday", HolidayViewSet, basename="holiday")
+router.register(r"holidays", HolidayViewSet, basename="holiday")
 
 urlpatterns = router.urls
-
