@@ -2,6 +2,7 @@ from django.db import models
 
 from .user import User
 from .programming_language import ProgrammingLanguage
+from .leave import Leave
 from shared.models import Base
 
 
