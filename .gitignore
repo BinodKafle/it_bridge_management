@@ -1,7 +1,6 @@
 .Python
 .idea
 .env
-.env.example
 .venv
 .vscode
 .DS_Store
