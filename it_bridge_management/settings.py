@@ -41,12 +41,14 @@ INSTALLED_APPS = [
 
     "rest_framework",
     "drf_spectacular",
+    "debug_toolbar",
 
     "itbridge",
     "shared",
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -148,3 +150,7 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
+
+INTERNAL_IPS =[
+   '127.0.0.1',
+]
