@@ -4,6 +4,7 @@ from .user import urlpatterns as user_urls
 from .student import urlpatterns as student_urls
 from .leave import urlpatterns as leave_urls
 from .holiday import urlpatterns as holiday_urls
+from .attendance import urlpatterns as attendance_urls
 
 urlpatterns = []
 
@@ -13,3 +14,4 @@ urlpatterns += user_urls
 urlpatterns += student_urls
 urlpatterns += leave_urls
 urlpatterns += holiday_urls
+urlpatterns += attendance_urls

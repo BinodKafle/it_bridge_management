@@ -3,3 +3,4 @@ from .teacher import TeacherViewSet
 from .user import UserViewSet
 from .student import StudentViewSet
 from .leave import LeaveViewSet
+from .attendance import CheckInView
