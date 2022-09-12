@@ -20,8 +20,14 @@ class AttendanceSerializer(serializers.ModelSerializer):
         return attrs
 
     def create(self, validated_data):
+        current_date_time = datetime.datetime.now()
+        current_year = current_date_time.year
+        current_month = current_date_time.month
+        current_day = current_date_time.day
+        ten_am_date_time = datetime.datetime(year=current_year, month=current_month, day=current_day, hour=10)
+        start_of_day = datetime.datetime(year=current_year, month=current_month, day=current_day, hour=00)
         check_in_today = Attendance.objects.filter(
-            user=validated_data["user"], check_in=datetime.datetime.now()
+            user=validated_data["user"], check_in__gte=start_of_day, check_in__lte=ten_am_date_time
         ).first()
         if not check_in_today:
             return Attendance.objects.create(
